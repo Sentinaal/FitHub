@@ -1,17 +1,22 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Image} from 'react-native';
+import { ImageBackground, StyleSheet, View, Image, OpaqueColorValue} from 'react-native';
 
 function mainScreen(props) {
     return (
-        <ImageBackground blurRadius={3} source={require('../img/bg.jpg')} style={styles.container}>
-            <Image blurRadius={3} source = {require('../img/randoWorkouts.jpg')} style = {styles.randoWorkouts}/>
-            <Image blurRadius={1} source = {require('../img/data.jpeg')} style = {styles.data}/>
-            <Image blurRadius={3} source = {require('../img/customWorkouts.jpg')} style = {styles.customWorkouts}/>
-            <Image blurRadius={3} source = {require('../img/lifestyle.jpg')} style = {styles.lifestyle}/>
-            <Image blurRadius={3} source = {require('../img/support.png')} style = {styles.support}/>
-            <Image blurRadius={3} source = {require('../img/userPrefs.jpg')} style = {styles.userPrefs}/>
-            <Image blurRadius={3} source = {require('../img/challenges.jpg')} style = {styles.challenges}/>
-        </ImageBackground>
+        <View style={{flex: 1, backgroundColor: 'rgba(31, 31, 31, 1)'}}>
+            <View >
+
+            </View>
+            <Image  source = {require('../img/logo.png')} style = {styles.logo}/>
+            <Image  source = {require('../img/randoWorkouts.jpg')} style = {styles.randoWorkouts}/>
+            <Image  source = {require('../img/data.jpeg')} style = {styles.data}/>
+            <Image  source = {require('../img/customWorkouts.jpg')} style = {styles.customWorkouts}/>
+            <Image  source = {require('../img/lifestyle.jpg')} style = {styles.lifestyle}/>
+            <Image  source = {require('../img/support.png')} style = {styles.support}/>
+            <Image source = {require('../img/userPrefs.jpg')} style = {styles.userPrefs}/>
+            <Image  source = {require('../img/challenges.jpg')} style = {styles.challenges}/>
+            <Image  source = {require('../img/logo.png')} style = {styles.logo}/>
+        </View>
     );
 } 
 
@@ -19,14 +24,21 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         alignItems: 'center',
+        backgroundColor: 'rgba(31, 31, 31, 1)'
+
+    },
+    logo:{
+        position: 'absolute',
+        width: 1,
+        height: 1
     },
     randoWorkouts: {
-        width: '45%',
-        height: '20%',
+        width: 416,
+        height: '30%',
         position: 'absolute',
-        top: 150,
-        left: 12,
-        borderWidth: 2,
+        top: -1,
+        left: -1,
+        borderWidth: 1,
         borderColor: '#696969',
         borderRadius:10,
     },
@@ -88,7 +100,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: '#696969',
         borderRadius:10
-    }
+    },
 })
 
 
