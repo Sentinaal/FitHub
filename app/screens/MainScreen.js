@@ -1,11 +1,11 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Image, OpaqueColorValue} from 'react-native';
+import { ImageBackground, StyleSheet, View, Image, Dimensions} from 'react-native';
 
 function mainScreen(props) {
     return (
         <View style={{flex: 1, backgroundColor: 'rgba(31, 31, 31, 1)'}}>
             <View style = {styles.container}>
-            <Image source = {require('../img/logo.jpeg')} style = {styles.logo}/>
+            <Image source = {require('../img/logo.png')} style = {styles.logo}/>
             <Image blurRadius = {3} source = {require('../img/randoWorkouts.jpg')} style = {styles.randoWorkouts}/>
             <Image source = {require('../img/data.jpeg')} style = {styles.data}/>
             <Image source = {require('../img/customWorkouts.jpg')} style = {styles.customWorkouts}/>
