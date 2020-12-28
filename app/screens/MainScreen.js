@@ -4,18 +4,17 @@ import { ImageBackground, StyleSheet, View, Image, OpaqueColorValue} from 'react
 function mainScreen(props) {
     return (
         <View style={{flex: 1, backgroundColor: 'rgba(31, 31, 31, 1)'}}>
-            <View >
-
-            </View>
-            <Image  source = {require('../img/logo.png')} style = {styles.logo}/>
-            <Image  source = {require('../img/randoWorkouts.jpg')} style = {styles.randoWorkouts}/>
-            <Image  source = {require('../img/data.jpeg')} style = {styles.data}/>
-            <Image  source = {require('../img/customWorkouts.jpg')} style = {styles.customWorkouts}/>
-            <Image  source = {require('../img/lifestyle.jpg')} style = {styles.lifestyle}/>
-            <Image  source = {require('../img/support.png')} style = {styles.support}/>
+            <View style = {styles.container}>
+            <Image source = {require('../img/logo.jpeg')} style = {styles.logo}/>
+            <Image blurRadius = {3} source = {require('../img/randoWorkouts.jpg')} style = {styles.randoWorkouts}/>
+            <Image source = {require('../img/data.jpeg')} style = {styles.data}/>
+            <Image source = {require('../img/customWorkouts.jpg')} style = {styles.customWorkouts}/>
+            <Image source = {require('../img/lifestyle.jpg')} style = {styles.lifestyle}/>
+            <Image source = {require('../img/support.png')} style = {styles.support}/>
             <Image source = {require('../img/userPrefs.jpg')} style = {styles.userPrefs}/>
-            <Image  source = {require('../img/challenges.jpg')} style = {styles.challenges}/>
-            <Image  source = {require('../img/logo.png')} style = {styles.logo}/>
+            <Image source = {require('../img/challenges.jpg')} style = {styles.challenges}/>
+            <Image source = {require('../img/logo.png')} style = {styles.logo}/>
+            </View>
         </View>
     );
 } 
@@ -26,11 +25,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'rgba(31, 31, 31, 1)'
 
-    },
-    logo:{
-        position: 'absolute',
-        width: 1,
-        height: 1
     },
     randoWorkouts: {
         width: 416,
@@ -93,13 +87,21 @@ const styles = StyleSheet.create({
         borderRadius:20
     },
     challenges:{
-        width: 320,
-        height: '10%',
-        position: 'relative',
-        top: 755,
+        width: '45%',
+        height: '20%',
+        position: 'absolute',
+        top: 150,
+        right: 12,
         borderWidth: 2,
         borderColor: '#696969',
         borderRadius:10
+    },
+    logo:{
+        position: 'absolute',
+        width: '65%',
+        height: '6%',
+        top: 30,
+        resizeMode: 'contain'
     },
 })
 
