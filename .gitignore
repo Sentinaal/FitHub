@@ -10,8 +10,5 @@ npm-debug.*
 web-build/
 .expo-shared/
 assets.json
-babel.config.js
-package-lock.json
-package.json
 # macOS
 .DS_Store
