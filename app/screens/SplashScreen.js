@@ -3,6 +3,7 @@ import {
     View, 
     Text, 
     Button, 
+    TouchableOpacity,
     Dimensions,
     Stylesheet,
     Image
@@ -13,13 +14,21 @@ const SplashScreen = () => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image
-                source={require('../img/logo.png')}
+                source={require('../img/logo.jpeg')}
                 style={styles.logo}
                 resizeMode='stretch'
                 />
             </View>
             <View style={styles.footer}>
-                <Text>Footer</Text>
+                <Text style={styles.title}>Get Fit!</Text>
+                <Text style={styles.text}> Sign in with account</Text>
+                <TouchableOpacity 
+                onPress={}
+                
+                >
+
+                </TouchableOpacity>
+                
             </View>         
         </View>
     );
@@ -30,7 +39,7 @@ export default SplashScreen;
 const {height} = Dimensions.get("screen");
 const height_logo = height * .20;
 
-const styoles = Stylesheet.create({
+const styles = Stylesheet.create({
     container: {
         flex: 1, 
         background: '#000000'
@@ -47,6 +56,6 @@ const styoles = Stylesheet.create({
         borderTopRightRadius: 30, 
         paddingVertical: 50,
         paddingHorizontal: 30
-    },
+    }
 
 })
