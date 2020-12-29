@@ -39,7 +39,6 @@ export function LoginScreen() {
     
 }
 
-
 const styles = StyleSheet.create({
 
     container: {
@@ -61,3 +60,5 @@ const styles = StyleSheet.create({
         marginVertical: 32,
     },
 })
+
+export default LoginScreen;
